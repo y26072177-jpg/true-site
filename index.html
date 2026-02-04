@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Une question pour toi 💖</title>
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      overflow: hidden;
+    }
+
+    h1 {
+      color: white;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .buttons {
+      position: relative;
+      width: 300px;
+      height: 200px;
+    }
+
+    button {
+      font-size: 20px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+
+    #yes {
+      background-color: #ff4d6d;
+      color: white;
+    }
+
+    #no {
+      position: absolute;
+      background-color: #555;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Est-ce que tu veux devenir ma petite amie ? 💕</h1>
+
+  <div class="buttons">
+    <button id="yes" onclick="window.location.href='oui.html'">YES</button>
+    <button id="no">NO</button>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("no");
+
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.random() * 200;
+      const y = Math.random() * 150;
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    });
+  </script>
+
+</body>
+</html>
